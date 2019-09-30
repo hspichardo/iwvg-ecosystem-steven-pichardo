@@ -41,4 +41,12 @@ public class User {
     public String getFamilyName() {
         return this.familyName;
     }
+
+    public String showOnlyNames(){
+        return this.name +  " "  + this.midname;
+    }
+
+    public String showOnlyFirstNameAndLastName(){
+        return this.name + " " + this.familyName;
+    }
 }
