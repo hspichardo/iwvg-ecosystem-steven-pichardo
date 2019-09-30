@@ -25,4 +25,22 @@ public class Fraction {
     public int getDenominator() {
         return denominator;
     }
+
+    public boolean isPropia(){
+        if (this.getNumerator() > this.getDenominator()){
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+
+    public boolean isImpropia(){
+        if(this.getDenominator() > this.getNumerator()){
+            return  true;
+        }
+        else {
+            return false;
+        }
+    }
 }

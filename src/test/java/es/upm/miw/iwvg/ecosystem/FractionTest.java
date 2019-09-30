@@ -26,4 +26,13 @@ public class FractionTest {
     void testGetDenominador(){
         assertEquals(2,fraction.getDenominator());
     }
+
+    @Test
+    void testIsPropia(){
+        assertEquals(false,fraction.isPropia());
+    }
+    @Test
+    void testIsImPropia(){
+        assertEquals(true,fraction.isImpropia());
+    }
 }
