@@ -26,4 +26,24 @@ public class FractionTest {
     void testGetDenominador(){
         assertEquals(2,fraction.getDenominator());
     }
+
+    @Test
+    void testIsPropia(){
+        assertEquals(false,fraction.isPropia());
+    }
+    @Test
+    void testIsImPropia(){
+        assertEquals(true,fraction.isImpropia());
+    }
+    @Test
+    void testIsEquivalente(){
+        Fraction f2 = new Fraction(2,1);
+        assertEquals(false,this.fraction.isEquivalente(f2));
+    }
+
+    @Test
+    void testIsMayor(){
+        Fraction f2 = new Fraction(4,1);
+        assertEquals(false, this.fraction.isMayor(f2));
+    }
 }
