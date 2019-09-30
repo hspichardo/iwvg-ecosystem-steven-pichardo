@@ -5,11 +5,14 @@ public class User {
 
     private String name;
 
+    private String midname;
+
     private String familyName;
 
-    public User(int number, String name, String familyName) {
+    public User(int number, String name, String midname, String familyName) {
         this.number = number;
         this.name = this.format(name);
+        this.midname = this.format(midname);
         this.familyName = this.format(familyName);
     }
 
@@ -18,11 +21,11 @@ public class User {
     }
 
     public String fullName() {
-        return this.name + " " + this.familyName;
+        return this.name + " " + this.midname + " " + this.familyName;
     }
 
     public String initials() {
-        return this.name.substring(0, 1) + ".";
+        return this.name.substring(0, 1) + "." + this.midname.substring(0, 1) + ".";
     }
 
     public int getNumber() {
@@ -33,7 +36,17 @@ public class User {
         return this.name;
     }
 
+    public String getMidlename(){return this.midname;}
+
     public String getFamilyName() {
         return this.familyName;
+    }
+
+    public String showOnlyNames(){
+        return this.name +  " "  + this.midname;
+    }
+
+    public String showOnlyFirstNameAndLastName(){
+        return this.name + " " + this.familyName;
     }
 }

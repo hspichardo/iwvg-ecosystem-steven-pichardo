@@ -10,17 +10,17 @@ public class UserTest {
 
     @BeforeEach
     void before() {
-        user = new User(1, "Harlyn","Pichardo");
+        user = new User(1, "Harlyn","Steven", "Pichardo");
     }
 
     @Test
     void testFullName(){
-        assertEquals("Harlyn Pichardo",user.fullName());
+        assertEquals("Harlyn Steven Pichardo",user.fullName());
     }
 
     @Test
     void testInicials(){
-        assertEquals("H.",user.initials());
+        assertEquals("H.S.",user.initials());
     }
 
     @Test
@@ -29,7 +29,23 @@ public class UserTest {
     }
 
     @Test
+    void testGetMiddleName(){
+        assertEquals("Steven",user.getMidlename());
+    }
+
+    @Test
     void testGetFamilyName(){
         assertEquals("Pichardo",user.getFamilyName());
     }
+
+    @Test
+    void testShowOnlyNames(){
+        assertEquals("Harlyn Steven",user.showOnlyNames());
+    }
+
+    @Test
+    void testShowFirstNameAndFamilyName(){
+        assertEquals("Harlyn Pichardo",user.showOnlyFirstNameAndLastName());
+    }
+
 }
