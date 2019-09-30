@@ -61,4 +61,10 @@ public class DecimalCollectionTest {
         assertEquals(-1.0,this.decimalCollection.min());
     }
 
+    @Test
+    void tesProductorio(){
+        assertEquals(-12.0 , this.decimalCollection.productorio());
+    }
+
+
 }
