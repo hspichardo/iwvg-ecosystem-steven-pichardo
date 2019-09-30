@@ -35,4 +35,9 @@ public class FractionTest {
     void testIsImPropia(){
         assertEquals(true,fraction.isImpropia());
     }
+    @Test
+    void testIsEquivalente(){
+        Fraction f2 = new Fraction(2,1);
+        assertEquals(false,this.fraction.isEquivalente(f2));
+    }
 }
