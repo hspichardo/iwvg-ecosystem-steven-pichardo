@@ -51,4 +51,14 @@ public class DecimalCollectionTest {
         assertThrows(ArithmeticException.class, () -> new DecimalCollection().higher());
     }
 
+    @Test
+    void testMeanDecimalCollection(){
+        assertEquals(1.5,this.decimalCollection.mean());
+    }
+
+    @Test
+    void testMinDecimalCollection(){
+        assertEquals(-1.0,this.decimalCollection.min());
+    }
+
 }

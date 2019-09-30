@@ -2,6 +2,7 @@ package es.upm.miw.iwvg.ecosystem;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class DecimalCollection {
@@ -35,4 +36,21 @@ public class DecimalCollection {
         this.validateIsNullOrEmpty();
         return Collections.max(this.collection);
     }
+
+    public double mean(){
+        Iterator<Double> it = this.collection.iterator();
+        Double acum =0.0;
+        this.validateIsNullOrEmpty();
+        while (it.hasNext()){
+            acum += it.next();
+        }
+        return acum / this.collection.size();
+
+    }
+
+    public double min(){
+        this.validateIsNullOrEmpty();
+        return Collections.min(this.collection);
+    }
+
 }
