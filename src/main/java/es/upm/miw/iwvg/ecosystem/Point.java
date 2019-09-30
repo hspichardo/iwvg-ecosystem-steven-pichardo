@@ -60,5 +60,6 @@ public class Point {
                 "x=" + x +
                 ", y=" + y + ", z=" +z+
                 '}';
+
     }
 }
