@@ -54,16 +54,5 @@ public class Fraction {
         }
     }
 
-    public boolean isMayor(Fraction f2){
-        int fra1 = this.getNumerator() / this.getDenominator();
-        int fra2 = f2.getNumerator() / f2.getDenominator();
 
-        if(fra1 > fra2){
-            return true;
-        }
-        else {
-            return false;
-        }
-
-    }
 }
