@@ -41,9 +41,5 @@ public class FractionTest {
         assertEquals(false,this.fraction.isEquivalente(f2));
     }
 
-    @Test
-    void testIsMayor(){
-        Fraction f2 = new Fraction(4,1);
-        assertEquals(false, this.fraction.isMayor(f2));
-    }
+
 }
